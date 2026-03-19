@@ -60,6 +60,16 @@ Thực hiện trong Claude Code:
 
 Lưu ý: `/webnovel-init` sẽ tạo một `PROJECT_ROOT` (thư mục con) trong Workspace hiện tại và ghi con trỏ dự án hiện tại vào `workspace/.claude/.webnovel-current-project`.
 
+#### Ví dụ nhập dữ liệu khởi tạo
+
+Trong quá trình tương tác với `/webnovel-init`, bạn có thể cung cấp thông tin như sau để có một khởi đầu chất lượng:
+
+- **Tên truyện và Thể loại**: `《Thanh Kiếm Mã Hóa》, Cyberpunk + Tiên hiệp, 2 triệu chữ.`
+- **Ý tưởng cốt lõi**: `Một lập trình viên xuyên không đến thế giới tu tiên, phát hiện linh khí thực chất là một loại mã nguồn tầng thấp, có thể dùng tư duy lập trình để "hack" các pháp thuật.`
+- **Thiết lập nhân vật chính**: `Lâm Phong, khao khát tìm đường về nhà, khiếm khuyết là quá phụ thuộc vào logic mà bỏ qua cảm xúc.`
+- **Kim thủ chỉ**: `Được tích hợp "Trình biên dịch Linh khí", có thể đơn giản hóa các câu chú phức tạp thành các hàm hiệu quả. Cái giá phải trả là mỗi lần biên dịch sẽ tiêu tốn năng lượng tính toán (não bộ), sử dụng quá mức sẽ dẫn đến quá nhiệt và ngất xỉu.`
+- **Thế giới quan**: `Tiên giới trên chín tầng trời thực chất là các máy chủ khổng lồ, chúng sinh ở hạ giới chỉ đang cung cấp sức mạnh tính toán cho tầng trên.`
+
 ### 4) Cấu hình môi trường RAG (Bắt buộc)
 
 Vào thư mục gốc của dự án tiểu thuyết đã khởi tạo, tạo tệp `.env`:

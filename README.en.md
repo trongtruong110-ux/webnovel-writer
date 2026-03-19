@@ -60,6 +60,16 @@ Execute in Claude Code:
 
 Note: `/webnovel-init` will create a `PROJECT_ROOT` (subdirectory) under the current workspace and write the current project pointer to `workspace/.claude/.webnovel-current-project`.
 
+#### Example Initialization Input
+
+During the `/webnovel-init` interaction, you can provide information like this for a high-quality start:
+
+- **Title & Genre**: `The Sword of Code, Cyberpunk + Cultivation, 2 million words.`
+- **Core Premise**: `A programmer transmigrates to a cultivation world and discovers that spiritual energy is actually low-level code, allowing him to "hack" spells with programming logic.`
+- **Protagonist**: `Lin Feng, desire to find a way home, flaw is over-reliance on logic while ignoring emotions.`
+- **Golden Finger**: `A built-in "Qi Compiler" that simplifies complex incantations into efficient functions. The cost is high computing power (brainpower) usage; over-use causes overheating and fainting.`
+- **Worldbuilding**: `The higher heavens are actually giant servers, and all living beings in the lower worlds are just providing computing power to the upper realms.`
+
 ### 4) Configure RAG Environment (Mandatory)
 
 Enter the initialized novel project root directory and create `.env`:
