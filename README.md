@@ -5,6 +5,9 @@
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Compatible-purple.svg)](https://claude.ai/claude-code)
 
 <a href="https://trendshift.io/repositories/22487" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22487" alt="lingfengQAQ%2Fwebnovel-writer | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+[English](./README.en.md) | [Tiếng Việt](./README.vi.md)
+
 ## 项目简单介绍
 
 `Webnovel Writer` 是基于 Claude Code 的长篇网文创作系统，目标是降低 AI 写作中的“遗忘”和“幻觉”，支持长周期连载创作。
@@ -17,6 +20,16 @@
 - 题材模板：`docs/genres.md`
 - 运维与恢复：`docs/operations.md`
 - 文档导航：`docs/README.md`
+
+## 最小运行要求
+
+由于核心 AI 逻辑（Claude）与 RAG（Embedding/Rerank）均基于 API 调用，本地机器负载较低：
+
+- **CPU**: 2 核+ (推荐以支持 RAG 并发处理)
+- **内存 (RAM)**: 4GB+ (确保 Claude Code 与 Dashboard 可同时流畅运行)
+- **GPU**: 无需本地 GPU (所有推理均通过 API 完成)
+- **存储**: 1GB+ 可用空间 (用于存放项目数据、向量库及依赖)
+- **网络**: 稳定的互联网连接以访问 API
 
 ## 快速开始
 
