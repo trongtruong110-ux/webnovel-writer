@@ -4,7 +4,9 @@ description: 启动可视化小说管理面板（只读 Web Dashboard），实�
 allowed-tools: Bash Read
 ---
 
-# Webnovel Dashboard
+# Webnovel Dashboard (Ràng buộc Ngôn ngữ: Tiếng Việt)
+
+**Ràng buộc Ngôn ngữ**: Tất cả các chỉ dẫn và tương tác liên quan đến dashboard phải được trình bày bằng tiếng Việt.
 
 ## 目标
 

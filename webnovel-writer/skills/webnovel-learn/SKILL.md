@@ -4,7 +4,9 @@ description: 从当前会话提取成功模式并写入 project_memory.json
 allowed-tools: Read Write Bash
 ---
 
-# /webnovel-learn
+# /webnovel-learn (Ràng buộc Ngôn ngữ: Tiếng Việt)
+
+**Ràng buộc Ngôn ngữ**: Tất cả các tóm tắt mẫu thành công và tương tác phải được trình bày bằng tiếng Việt.
 
 ## Project Root Guard（必须先确认）
 

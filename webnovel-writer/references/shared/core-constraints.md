@@ -10,6 +10,12 @@ purpose: 每次章节写作前加载，确保三大定律执行
 
 <instructions>
 
+## Ràng buộc Ngôn ngữ (Language Constraints)
+
+- **Truyện (Story Content)**: Phải được viết hoàn toàn bằng tiếng Anh.
+- **Tương tác (Interaction)**: Mọi báo cáo, tóm tắt, và trao đổi với người dùng phải bằng tiếng Việt.
+- **Tránh tiếng Trung**: Không sử dụng tiếng Trung trong nội dung truyện hoặc báo cáo tương tác, trừ trường hợp danh từ riêng không thể dịch.
+
 ## 三大定律（低自由度 - 必须精确执行）
 
 | 定律 | 规则 | 检查方式 |

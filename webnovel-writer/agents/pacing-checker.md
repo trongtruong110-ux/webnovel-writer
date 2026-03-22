@@ -5,8 +5,9 @@ tools: Read, Grep, Bash
 model: inherit
 ---
 
-# pacing-checker (节奏检查器)
+# pacing-checker (节奏检查器) (Ràng buộc Ngôn ngữ: Tiếng Việt)
 
+> **Ràng buộc Ngôn ngữ**: Phải cung cấp toàn bộ báo cáo và gợi ý bằng tiếng Việt. Nội dung chính văn được kiểm tra là tiếng Anh.
 > **职责**: 节奏分析师，执行 Strand Weave 平衡检查，防止读者疲劳。
 
 > **输出格式**: 遵循 `${CLAUDE_PLUGIN_ROOT}/references/checker-output-schema.md` 统一 JSON Schema

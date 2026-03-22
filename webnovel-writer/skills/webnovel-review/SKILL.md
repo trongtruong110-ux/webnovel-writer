@@ -4,7 +4,9 @@ description: Reviews chapter quality with checker agents and generates reports. 
 allowed-tools: Read Grep Write Edit Bash Task AskUserQuestion
 ---
 
-# Quality Review Skill
+# Quality Review Skill (Ràng buộc Ngôn ngữ: Tiếng Việt)
+
+**Ràng buộc Ngôn ngữ**: Tất cả các báo cáo đánh giá, phản hồi và trao đổi với người dùng phải được trình bày bằng tiếng Việt.
 
 ## Project Root Guard（必须先确认）
 

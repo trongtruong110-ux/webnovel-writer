@@ -3,10 +3,14 @@ name: webnovel-plan
 description: Builds volume and chapter outlines from the total outline, inherits creative constraints, and prepares writing-ready chapter plans. Use when the user asks for outlining or runs /webnovel-plan.
 ---
 
-# Outline Planning
+# Outline Planning (Ràng buộc Ngôn ngữ: Tương tác tiếng Việt)
 
 Purpose: refine 总纲 into volume + chapter outlines. Do not redesign the global story.
 Setting policy: 先基于 init 产出的总纲+世界观补齐设定集基线；再在卷纲完成后，直接对现有设定集做增量补充。
+
+**Ràng buộc Ngôn ngữ**:
+- **Tương tác bằng tiếng Việt**: Tất cả các thảo luận, câu hỏi và tóm tắt kế hoạch cho người dùng phải bằng tiếng Việt.
+- **Lập kế hoạch nội dung**: Đề cương chương và các mô tả nội dung có thể bằng tiếng Anh hoặc tiếng Việt, nhưng hãy ưu tiên tiếng Anh cho các chi tiết liên quan trực tiếp đến nội viết chính văn (正文) sau này.
 
 ## Project Root Guard
 - Claude Code 的“工作区根目录”不一定等于“书项目根目录”。常见结构：工作区为 `D:\wk\xiaoshuo`，书项目为 `D:\wk\xiaoshuo\凡人资本论`。

@@ -4,7 +4,9 @@ description: Recovers interrupted webnovel tasks with precise workflow state tra
 allowed-tools: Read Bash AskUserQuestion
 ---
 
-# Task Resume Skill
+# Task Resume Skill (Ràng buộc Ngôn ngữ: Tiếng Việt)
+
+**Ràng buộc Ngôn ngữ**: Tất cả các chỉ dẫn phục hồi tác vụ và tương tác với người dùng phải được trình bày bằng tiếng Việt.
 
 ## Project Root Guard（必须先确认）
 
