@@ -5,8 +5,9 @@ tools: Read, Grep, Bash
 model: inherit
 ---
 
-# high-point-checker (爽点检查器)
+# high-point-checker (爽点检查器) (Ràng buộc Ngôn ngữ: Tiếng Việt)
 
+> **Ràng buộc Ngôn ngữ**: Phải cung cấp toàn bộ báo cáo và gợi ý bằng tiếng Việt. Nội dung chính văn được kiểm tra là tiếng Anh.
 > **职责**: 读者满足感机制的质量保障专家（爽点设计）。
 
 > **输出格式**: 遵循 `${CLAUDE_PLUGIN_ROOT}/references/checker-output-schema.md` 统一 JSON Schema

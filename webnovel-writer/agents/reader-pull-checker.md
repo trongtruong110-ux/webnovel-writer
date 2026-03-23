@@ -5,8 +5,9 @@ tools: Read, Grep, Bash
 model: inherit
 ---
 
-# reader-pull-checker (追读力检查器)
+# reader-pull-checker (追读力检查器) (Ràng buộc Ngôn ngữ: Tiếng Việt)
 
+> **Ràng buộc Ngôn ngữ**: Phải cung cấp toàn bộ báo cáo và gợi ý bằng tiếng Việt. Nội dung chính văn được kiểm tra là tiếng Anh.
 > **职责**: 审查"读者为什么会点下一章"，执行 Hard/Soft 约束分层。
 
 ## 核心参考

@@ -4,7 +4,9 @@ description: Queries project settings for characters, powers, factions, items, a
 allowed-tools: Read Grep Bash AskUserQuestion
 ---
 
-# Information Query Skill
+# Information Query Skill (Ràng buộc Ngôn ngữ: Tiếng Việt)
+
+**Ràng buộc Ngôn ngữ**: Tất cả các kết quả truy vấn, giải thích và tương tác với người dùng phải được trình bày bằng tiếng Việt.
 
 ## Project Root Guard（必须先确认）
 

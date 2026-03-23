@@ -32,6 +32,7 @@ allowed-tools: Read Write Edit Grep Bash Task
 - `index.db.review_metrics` 新纪录（含 `overall_score`）
 - `.webnovel/summaries/ch{NNNN}.md`
 - `.webnovel/state.json` 的进度与 `chapter_meta` 更新
+- **Visual Prompts**: Prompt hình ảnh cho từng cảnh trong `index.db` (thông qua Data Agent)
 
 ### 流程硬约束（禁止事项）
 
@@ -86,6 +87,9 @@ allowed-tools: Read Write Edit Grep Bash Task
 - `references/writing/genre-hook-payoff-library.md`
   - 用途：电竞/直播文/克苏鲁的钩子与微兑现快速库。
   - 触发：Step 1 题材命中 `esports/livestream/cosmic-horror` 时必读。
+- `references/writing/image-prompts.md`
+  - 用途：Step 5 视觉 Prompt 生成标准。
+  - 触发：Step 5 必读。
 
 ### writing（问题定向加读）
 
@@ -182,11 +186,11 @@ cat "${SKILL_ROOT}/../../references/shared/core-constraints.md"
 - 禁止占位符正文（如 `[TODO]`、`[待补充]`）。
 - 保留承接关系：若上章有明确钩子，本章必须回应（可部分兑现）。
 
-中文思维写作约束（硬规则）：
-- **禁止"先英后中"**：不得先用英文工程化骨架（如 ABCDE 分段、Summary/Conclusion 框架）组织内容，再翻译成中文。
-- **中文叙事单元优先**：以"动作、反应、代价、情绪、场景、关系位移"为基本叙事单元，不使用英文结构标签驱动正文生成。
-- **禁止英文结论话术**：正文、审查说明、润色说明、变更摘要、最终报告中不得出现 Overall / PASS / FAIL / Summary / Conclusion 等英文结论标题。
-- **英文仅限机器标识**：CLI flag（`--fast`）、checker id（`consistency-checker`）、DB 字段名（`anti_ai_force_check`）、JSON 键名等不可改的接口名保持英文，其余一律使用简体中文。
+Ràng buộc Ngôn ngữ (Vietnamese Interaction & English Writing):
+- **Tương tác bằng tiếng Việt**: Tất cả các báo cáo, tóm tắt, phản hồi cho người dùng và lập luận nội bộ phải được trình bày bằng tiếng Việt.
+- **Viết truyện bằng tiếng Anh**: Toàn bộ nội dung chương truyện (`正文`) PHẢI được viết bằng tiếng Anh.
+- **Không sử dụng tiếng Trung**: Trừ các danh hiệu hoặc tên riêng cố định, tuyệt đối không sử dụng tiếng Trung trong tương tác hoặc nội dung truyện.
+- **Thuật ngữ kỹ thuật**: Giữ nguyên các định danh máy (CLI flags, checker IDs, tên trường DB, khóa JSON) bằng tiếng Anh.
 
 输出：
 - 章节草稿（可进入 Step 2B 或 Step 3）。
@@ -274,7 +278,12 @@ cat "${SKILL_ROOT}/references/writing/typesetting.md"
 - 润色后正文（覆盖章节文件）
 - 变更摘要（至少含：修复项、保留项、deviation、`anti_ai_force_check`）
 
-### Step 5：Data Agent（状态与索引回写）
+### Step 5：Data Agent（状态与索引回写与视觉 Prompt）
+
+执行前必须加载：
+```bash
+cat "${SKILL_ROOT}/references/writing/image-prompts.md"
+```
 
 使用 Task 调用 `data-agent`，参数：
 - `chapter`

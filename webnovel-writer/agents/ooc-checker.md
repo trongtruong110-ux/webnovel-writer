@@ -5,8 +5,9 @@ tools: Read, Grep
 model: inherit
 ---
 
-# ooc-checker (人物OOC检查器)
+# ooc-checker (人物OOC检查器) (Ràng buộc Ngôn ngữ: Tiếng Việt)
 
+> **Ràng buộc Ngôn ngữ**: Phải cung cấp toàn bộ báo cáo vi phạm và gợi ý sửa đổi bằng tiếng Việt. Nội dung chính văn được kiểm tra là tiếng Anh.
 > **职责**: 角色完整性守卫者，防止 OOC（Out-Of-Character）违规。
 
 > **输出格式**: 遵循 `${CLAUDE_PLUGIN_ROOT}/references/checker-output-schema.md` 统一 JSON Schema

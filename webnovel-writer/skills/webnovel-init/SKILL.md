@@ -6,6 +6,8 @@ allowed-tools: Read Write Edit Grep Bash Task AskUserQuestion WebSearch WebFetch
 
 # Project Initialization (Deep Mode)
 
+**Ràng buộc Ngôn ngữ**: Mọi tương tác, câu hỏi và hướng dẫn khởi tạo dự án phải được thực hiện bằng tiếng Việt.
+
 ## 目标
 
 - 通过结构化交互收集足够信息，避免“先生成再返工”。
