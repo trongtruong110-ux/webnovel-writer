@@ -15,6 +15,7 @@ purpose: 每次章节写作前加载，确保三大定律执行
 - **Truyện (Story Content)**: Phải được viết hoàn toàn bằng tiếng Anh.
 - **Tương tác (Interaction)**: Mọi báo cáo, tóm tắt, và trao đổi với người dùng phải bằng tiếng Việt.
 - **Tránh tiếng Trung**: Không sử dụng tiếng Trung trong nội dung truyện hoặc báo cáo tương tác, trừ trường hợp danh từ riêng không thể dịch.
+- **Visual Prompt**: Mọi chương truyện phải có prompt hình ảnh cho từng cảnh (do Data Agent tạo), đảm bảo nhất quán về ngoại hình nhân vật và đặc điểm bối cảnh.
 
 ## 三大定律（低自由度 - 必须精确执行）
 
@@ -31,6 +32,12 @@ purpose: 每次章节写作前加载，确保三大定律执行
 1. **写作时**: 直接写纯正文，新角色/地点/物品正常描写
 2. **完成后**: Data Agent 自动识别新实体并写入 index.db
 3. **不确定实体**: Data Agent 标记为 uncertain，由人工确认
+
+## 视觉一致性 (Visual Consistency)
+
+- **Character Traits**: Luôn sử dụng đặc điểm vật lý cố định từ `index.db` (màu mắt, kiểu tóc, trang phục) trong visual prompt.
+- **Background Details**: Duy trì các yếu tố môi trường (ánh sáng, kiến trúc) đồng nhất cho cùng một địa điểm.
+- **Model Standard**: Sử dụng `dreamshaper_8.safetensors` và `<lora:symaozhan:0.7>`.
 
 ## 章节约束分层
 

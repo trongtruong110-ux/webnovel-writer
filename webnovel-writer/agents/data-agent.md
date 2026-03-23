@@ -154,10 +154,15 @@ hook_strength: "strong"
 {下章衔接，30字}
 ```
 
-### Step F: AI 场景切片
+### Step F: AI 场景切片与视觉 Prompt 生成
 
-- 按地点/时间/视角切分场景
-- 每个场景生成摘要 (50-100字)
+- **Phân đoạn cảnh**: Chia chương thành các cảnh dựa trên địa điểm/thời gian/góc nhìn.
+- **Tóm tắt cảnh**: Mỗi cảnh tạo một tóm tắt ngắn (50-100 chữ) bằng tiếng Việt.
+- **Tạo Visual Prompt (Bắt buộc)**:
+  - Với mỗi cảnh, tạo một `visual_prompt` bằng tiếng Anh để dùng cho Easy Diffusion.
+  - **Nhất quán thực thể**: Truy vấn `index.db` (Step A) để lấy mô tả ngoại hình nhân vật và đặc điểm bối cảnh.
+  - **Cấu hình Model**: Mặc định sử dụng `dreamshaper_8.safetensors` và LoRA `symaozhan.safetensors`.
+  - **Cú pháp**: `[Mô tả nhân vật] + [Hành động] + [Mô tả bối cảnh] + <lora:symaozhan:0.7>`.
 
 ### Step G: 向量嵌入
 

@@ -32,6 +32,7 @@ allowed-tools: Read Write Edit Grep Bash Task
 - `index.db.review_metrics` 新纪录（含 `overall_score`）
 - `.webnovel/summaries/ch{NNNN}.md`
 - `.webnovel/state.json` 的进度与 `chapter_meta` 更新
+- **Visual Prompts**: Prompt hình ảnh cho từng cảnh trong `index.db` (thông qua Data Agent)
 
 ### 流程硬约束（禁止事项）
 
@@ -86,6 +87,9 @@ allowed-tools: Read Write Edit Grep Bash Task
 - `references/writing/genre-hook-payoff-library.md`
   - 用途：电竞/直播文/克苏鲁的钩子与微兑现快速库。
   - 触发：Step 1 题材命中 `esports/livestream/cosmic-horror` 时必读。
+- `references/writing/image-prompts.md`
+  - 用途：Step 5 视觉 Prompt 生成标准。
+  - 触发：Step 5 必读。
 
 ### writing（问题定向加读）
 
@@ -274,7 +278,12 @@ cat "${SKILL_ROOT}/references/writing/typesetting.md"
 - 润色后正文（覆盖章节文件）
 - 变更摘要（至少含：修复项、保留项、deviation、`anti_ai_force_check`）
 
-### Step 5：Data Agent（状态与索引回写）
+### Step 5：Data Agent（状态与索引回写与视觉 Prompt）
+
+执行前必须加载：
+```bash
+cat "${SKILL_ROOT}/references/writing/image-prompts.md"
+```
 
 使用 Task 调用 `data-agent`，参数：
 - `chapter`
