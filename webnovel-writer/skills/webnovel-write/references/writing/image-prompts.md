@@ -44,6 +44,10 @@ Mỗi cảnh (scene) sẽ có một `visual_prompt` theo cấu trúc:
 
 ## 5. Tích hợp vào Workflow
 1. **Data Agent** thực hiện chia cảnh (Step F).
-2. Với mỗi cảnh, Data Agent truy vấn thông tin thực thể liên quan.
+2. Với mỗi cảnh, Data Agent truy vấn thông tin thực thể liên quan từ `index.db`.
 3. Tạo `visual_prompt` dựa trên tóm tắt cảnh và dữ liệu thực thể.
-4. Lưu `visual_prompt` vào metadata của scene trong `index.db`.
+4. **Lưu trữ đa kênh**:
+   - Lưu vào metadata của scene trong `index.db`.
+   - Ghi vào tóm tắt chương `.webnovel/summaries/ch{NNNN}.md`.
+   - Tạo tệp chuyên biệt `正文/第{chapter_padded}章-Visual-Prompts.md` để người dùng dễ dàng truy cập.
+5. **Hiển thị**: Claude phải liệt kê các prompt này trong báo cáo kết thúc để người dùng có thể sao chép ngay vào Easy Diffusion.

@@ -32,7 +32,10 @@ allowed-tools: Read Write Edit Grep Bash Task
 - `index.db.review_metrics` 新纪录（含 `overall_score`）
 - `.webnovel/summaries/ch{NNNN}.md`
 - `.webnovel/state.json` 的进度与 `chapter_meta` 更新
-- **Visual Prompts**: Prompt hình ảnh cho từng cảnh trong `index.db` (thông qua Data Agent)
+- **Visual Prompts**:
+  - Lưu vào `index.db` (thông qua Data Agent)
+  - Tạo tệp `正文/第{chapter_padded}章-Visual-Prompts.md`
+  - Hiển thị trực tiếp các prompt này trong cửa sổ chat sau khi hoàn thành.
 
 ### 流程硬约束（禁止事项）
 
@@ -349,6 +352,7 @@ git -c i18n.commitEncoding=UTF-8 commit -m "第{chapter_num}章: {title}"
 未满足以下条件前，不得结束流程：
 
 1. 章节正文文件存在且非空：`正文/第{chapter_padded}章-{title_safe}.md` 或 `正文/第{chapter_padded}章.md`
+1.5. **Tệp Visual Prompt tồn tại**: `正文/第{chapter_padded}章-Visual-Prompts.md` chứa prompt cho mọi cảnh.
 2. Step 3 已产出 `overall_score` 且 `review_metrics` 成功落库
 3. Step 4 已处理全部 `critical`，`high` 未修项有 deviation 记录
 4. Step 4 的 `anti_ai_force_check=pass`（基于全文检查；fail 时不得进入 Step 5）
@@ -362,13 +366,17 @@ git -c i18n.commitEncoding=UTF-8 commit -m "第{chapter_num}章: {title}"
 ```bash
 test -f "${PROJECT_ROOT}/.webnovel/state.json"
 test -f "${PROJECT_ROOT}/正文/第${chapter_padded}章.md"
+test -f "${PROJECT_ROOT}/正文/第${chapter_padded}章-Visual-Prompts.md"
 test -f "${PROJECT_ROOT}/.webnovel/summaries/ch${chapter_padded}.md"
 python -X utf8 "${SCRIPTS_DIR}/webnovel.py" --project-root "${PROJECT_ROOT}" index get-recent-review-metrics --limit 1
 tail -n 1 "${PROJECT_ROOT}/.webnovel/observability/data_agent_timing.jsonl" || true
 ```
 
+Hiển thị kết quả:
+- Liệt kê toàn bộ Visual Prompts đã tạo để người dùng sao chép ngay.
+
 成功标准：
-- 章节文件、摘要文件、状态文件齐全且内容可读。
+- 章节文件、摘要文件、状态文件、Visual Prompt file齐全且内容可读。
 - 审查分数可追溯，`overall_score` 与 Step 5 输入一致。
 - 润色后未破坏大纲与设定约束。
 

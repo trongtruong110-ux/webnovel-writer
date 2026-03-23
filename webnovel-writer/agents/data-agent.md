@@ -152,6 +152,10 @@ hook_strength: "strong"
 
 ## 承接点
 {下章衔接，30字}
+
+## Visual Prompts (Easy Diffusion)
+- [Scene 1] {Visual Prompt 1}
+- [Scene 2] {Visual Prompt 2}
 ```
 
 ### Step F: AI 场景切片与视觉 Prompt 生成
@@ -237,6 +241,9 @@ python -X utf8 "${SCRIPTS_DIR}/webnovel.py" --project-root "{project_root}" styl
   "scenes_chunked": 4,
   "uncertain": [
     {"mention": "那位前辈", "candidates": [{"type": "角色", "id": "yaolao"}, {"type": "角色", "id": "elder_zhang"}], "adopted": "yaolao", "confidence": 0.6}
+  ],
+  "visual_prompts": [
+    {"scene": 1, "prompt": "...", "model": "dreamshaper_8.safetensors"}
   ],
   "warnings": [
     "中置信度匹配: 那位前辈 → yaolao (confidence: 0.6)"
